@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import VillasSection from "@/components/VillasSection";
+import InsideVillas from "@/components/InsideVillas";
 import Gallery from "@/components/Gallery";
 import { TrustStrip, Story, Experiences, Comparison } from "@/components/Sections";
 import { Testimonials, Faq } from "@/components/TestimonialsFaq";
@@ -12,6 +13,7 @@ export default function Home() {
       <TrustStrip />
       <Story />
       <VillasSection />
+      <InsideVillas />
       <Gallery />
       <Experiences />
       <Comparison />

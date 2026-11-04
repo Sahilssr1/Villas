@@ -94,3 +94,33 @@ Work is left **uncommitted in the working tree** for review, as requested.
 Nothing has been pushed to GitHub and the site is **not live**. Not yet
 tested: live deployment, real email delivery, and visual/browser checking
 on real devices (build verification only — see the delivery report).
+
+## Luxury rebuild (2026-11-05, uncommitted)
+
+Pattern-level inspiration only — no Jiro template code, assets, or
+purchase was used; everything here is original code in this repo.
+
+- Visual system: ivory/cream backgrounds, charcoal-ink text
+  (#1e1b18), bronze accent (#b08d57), Playfair Display + Inter,
+  hairline rules, uppercase eyebrow labels, numbered editorial headers
+  (01 Story, 02 Collection, 03 Inside, 04 Gallery, 05 Experiences,
+  06 Comparison, 07 Reviews, 08 FAQ, 09 Enquiry). Header turns ivory
+  with a bronze hairline when solid.
+- Hero cursor-reveal (original): on fine-pointer devices a circular
+  spotlight follows the mouse and reveals the full-colour hero image
+  over a muted version; touch and reduced-motion users always see the
+  full image.
+- Villa catalog: proper tabs (All / Island / Coastal / Beachfront,
+  aria-selected, underline indicator, arrow-key navigation), a
+  featured-villa panel above the grid (large photo, tagline, specs,
+  amenities, price), a Nightly / Weekly toggle that updates featured
+  and card prices, and a 5×5 tile reveal when the featured photo
+  changes. Clicking a card or its View details button selects it.
+- "Inside the villas": a panoramic drag viewer with Living / Bedroom /
+  Pool terrace tabs, drag-to-pan (Framer Motion drag="x"), a drag
+  hint, and prev/next buttons. It is labelled as a panoramic drag
+  viewer, NOT a 360° viewer — no 360° asset exists. Photos reuse only
+  existing Unsplash IDs from src/data/villas.ts.
+- Gallery lightbox, Experiences, Comparison, Testimonials, FAQ,
+  Enquiry and Newsletter forms, and Footer are restyled only — no
+  fields or sections removed, no new dependencies.

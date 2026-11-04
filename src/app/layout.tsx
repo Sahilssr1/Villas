@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-amber-400 focus:px-5 focus:py-2.5 focus:font-semibold focus:text-[#0c2226]"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-[#b08d57] focus:px-5 focus:py-2.5 focus:font-semibold focus:text-[#1e1b18]"
         >
           Skip to main content
         </a>

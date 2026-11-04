@@ -7,6 +7,7 @@ import { Menu, X, Waves } from "lucide-react";
 const links = [
   { href: "#story", label: "Our story" },
   { href: "#villas", label: "Villas" },
+  { href: "#inside", label: "Inside" },
   { href: "#gallery", label: "Gallery" },
   { href: "#experiences", label: "Experiences" },
   { href: "#testimonials", label: "Reviews" },
@@ -25,26 +26,33 @@ export default function Header() {
   }, []);
 
   const solid = scrolled || open;
+  const linkCls = solid
+    ? "text-[#1e1b18]/80 hover:text-[#1e1b18]"
+    : "text-white/90 hover:text-white";
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        solid ? "bg-[#0c2226]/95 shadow-lg backdrop-blur" : "bg-transparent"
+        solid
+          ? "border-b border-[#b08d57]/30 bg-[#faf7f1]/95 shadow-sm backdrop-blur"
+          : "border-b border-transparent bg-transparent"
       }`}
     >
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        className={`mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8 ${
+          solid ? "text-[#1e1b18]" : "text-white"
+        }`}
       >
-        <Link href="#top" className="flex items-center gap-2 text-white" aria-label="Villas home">
-          <Waves className="h-7 w-7 text-amber-300" aria-hidden="true" />
+        <Link href="#top" className="flex items-center gap-2" aria-label="Villas home">
+          <Waves className="h-7 w-7 text-[#b08d57]" aria-hidden="true" />
           <span className="font-display text-2xl font-semibold tracking-tight">Villas</span>
         </Link>
 
         <ul className="hidden items-center gap-7 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
-              <Link href={l.href} className="text-sm font-medium text-white/90 transition hover:text-white hover:underline hover:underline-offset-4">
+              <Link href={l.href} className={`text-sm font-medium transition hover:underline hover:underline-offset-4 ${linkCls}`}>
                 {l.label}
               </Link>
             </li>
@@ -54,7 +62,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="#enquiry"
-            className="hidden rounded-full bg-amber-400 px-5 py-2.5 text-sm font-semibold text-[#0c2226] transition hover:bg-amber-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300 sm:inline-block"
+            className="lift hidden rounded-full bg-[#b08d57] px-5 py-2.5 text-sm font-semibold text-[#1e1b18] transition hover:bg-[#c9a06a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c9a06a] sm:inline-block"
           >
             Check availability
           </Link>
@@ -63,7 +71,7 @@ export default function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
-            className="rounded-lg p-2 text-white transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-amber-300 lg:hidden"
+            className="rounded-lg p-2 transition hover:bg-black/5 focus-visible:outline-2 focus-visible:outline-[#c9a06a] lg:hidden"
           >
             {open ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
           </button>
@@ -71,14 +79,14 @@ export default function Header() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-[#0c2226] px-4 pb-6 pt-2 lg:hidden">
+        <div className="border-t border-[#b08d57]/25 bg-[#faf7f1] px-4 pb-6 pt-2 text-[#1e1b18] lg:hidden">
           <ul className="space-y-1">
             {links.map((l) => (
               <li key={l.href}>
                 <Link
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 text-base font-medium text-white hover:bg-white/10"
+                  className="block rounded-lg px-3 py-3 text-base font-medium hover:bg-black/5"
                 >
                   {l.label}
                 </Link>
@@ -88,7 +96,7 @@ export default function Header() {
               <Link
                 href="#enquiry"
                 onClick={() => setOpen(false)}
-                className="mt-2 block rounded-full bg-amber-400 px-5 py-3 text-center text-sm font-semibold text-[#0c2226]"
+                className="mt-2 block rounded-full bg-[#b08d57] px-5 py-3 text-center text-sm font-semibold text-[#1e1b18]"
               >
                 Check availability
               </Link>

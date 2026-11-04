@@ -5,8 +5,8 @@ import { CheckCircle2, Loader2, Mail, Send } from "lucide-react";
 import { villas } from "@/data/villas";
 import Reveal, { Eyebrow } from "./Reveal";
 
-const inputCls = "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-[#0c2226] placeholder:text-slate-400 focus:border-teal-700 focus:outline-2 focus:outline-teal-700";
-const labelCls = "mb-1.5 block text-sm font-semibold text-[#0c2226]";
+const inputCls = "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-[#1e1b18] placeholder:text-slate-400 focus:border-[#b08d57] focus:outline-2 focus:outline-[#b08d57]";
+const labelCls = "mb-1.5 block text-sm font-semibold text-[#1e1b18]";
 
 export function EnquiryForm() {
   const [villaId, setVillaId] = useState(villas[0].id);
@@ -53,10 +53,10 @@ export function EnquiryForm() {
   }
 
   return (
-    <section id="enquiry" className="scroll-mt-24 bg-[#0c2226] py-20 sm:py-24">
+    <section id="enquiry" className="scroll-mt-24 bg-[#1e1b18] py-20 sm:py-24">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-5 lg:px-8">
         <Reveal className="lg:col-span-2">
-          <Eyebrow><span className="text-amber-300">Your villa is waiting</span></Eyebrow>
+          <Eyebrow number="09" light>Your villa is waiting</Eyebrow>
           <h2 className="mt-3 font-display text-4xl font-semibold text-white sm:text-5xl">Check availability</h2>
           <p className="mt-4 text-lg leading-relaxed text-white/80">
             Tell us which villa and when. We confirm availability and send a
@@ -72,10 +72,10 @@ export function EnquiryForm() {
         <Reveal delay={0.1} className="lg:col-span-3">
           {sent ? (
             <div className="rounded-3xl bg-white p-8 text-center shadow-xl" role="status">
-              <CheckCircle2 className="mx-auto h-12 w-12 text-teal-700" aria-hidden="true" />
-              <h3 className="mt-4 font-display text-2xl font-semibold text-[#0c2226]">Enquiry received — thank you, {name.split(" ")[0]}.</h3>
+              <CheckCircle2 className="mx-auto h-12 w-12 text-[#b08d57]" aria-hidden="true" />
+              <h3 className="mt-4 font-display text-2xl font-semibold text-[#1e1b18]">Enquiry received — thank you, {name.split(" ")[0]}.</h3>
               <p className="mt-2 text-slate-600">In the live site this would go to the bookings team. In this demo it is validated and acknowledged only — no email or database is involved.</p>
-              <button type="button" onClick={() => setSent(false)} className="mt-6 rounded-full bg-[#0c2226] px-6 py-3 text-sm font-semibold text-white hover:bg-teal-800">Send another enquiry</button>
+              <button type="button" onClick={() => setSent(false)} className="mt-6 rounded-full bg-[#1e1b18] px-6 py-3 text-sm font-semibold text-white hover:bg-[#966f3f]">Send another enquiry</button>
             </div>
           ) : (
             <form onSubmit={onSubmit} noValidate className="rounded-3xl bg-white p-6 shadow-xl sm:p-8">
@@ -112,7 +112,7 @@ export function EnquiryForm() {
                 </div>
               </div>
               {error && <p role="alert" className="mt-5 rounded-xl bg-red-50 px-4 py-3 text-sm font-medium text-red-700">{error}</p>}
-              <button type="submit" disabled={loading} className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-amber-400 px-7 py-3.5 text-sm font-semibold text-[#0c2226] transition hover:bg-amber-300 disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400">
+              <button type="submit" disabled={loading} className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-[#b08d57] px-7 py-3.5 text-sm font-semibold text-[#1e1b18] transition hover:bg-[#c9a06a] disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b08d57]">
                 {loading ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" /> : <Send className="h-5 w-5" aria-hidden="true" />}
                 {loading ? "Sending…" : "Send enquiry"}
               </button>
@@ -141,20 +141,20 @@ export function Newsletter() {
   }
 
   return (
-    <section aria-labelledby="newsletter-heading" className="bg-amber-300 py-16">
+    <section aria-labelledby="newsletter-heading" className="bg-[#e8dcc8] py-16">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
         <Reveal>
-          <h2 id="newsletter-heading" className="font-display text-3xl font-semibold text-[#0c2226] sm:text-4xl">Be first to hear about rare openings</h2>
-          <p className="mt-3 text-[#0c2226]/80">New dates, island weeks and quiet-season offers — no spam, and no fake subscription in this demo.</p>
+          <h2 id="newsletter-heading" className="font-display text-3xl font-semibold text-[#1e1b18] sm:text-4xl">Be first to hear about rare openings</h2>
+          <p className="mt-3 text-[#1e1b18]/80">New dates, island weeks and quiet-season offers — no spam, and no fake subscription in this demo.</p>
           {done ? (
-            <p role="status" className="mx-auto mt-6 flex max-w-md items-center justify-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-[#0c2226]">
-              <CheckCircle2 className="h-5 w-5 text-teal-700" aria-hidden="true" />Thanks — you are on the list (demo confirmation).
+            <p role="status" className="mx-auto mt-6 flex max-w-md items-center justify-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-[#1e1b18]">
+              <CheckCircle2 className="h-5 w-5 text-[#b08d57]" aria-hidden="true" />Thanks — you are on the list (demo confirmation).
             </p>
           ) : (
             <form onSubmit={onSubmit} noValidate className="mx-auto mt-6 flex max-w-md flex-col gap-3 sm:flex-row">
               <label htmlFor="newsletter-email" className="sr-only">Email address</label>
-              <input id="newsletter-email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" className="flex-1 rounded-full border border-[#0c2226]/20 bg-white px-5 py-3 text-[#0c2226] placeholder:text-slate-400 focus:outline-2 focus:outline-[#0c2226]" />
-              <button type="submit" className="flex items-center justify-center gap-2 rounded-full bg-[#0c2226] px-6 py-3 text-sm font-semibold text-white hover:bg-teal-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0c2226]">
+              <input id="newsletter-email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" className="flex-1 rounded-full border border-[#1e1b18]/20 bg-white px-5 py-3 text-[#1e1b18] placeholder:text-slate-400 focus:outline-2 focus:outline-[#1e1b18]" />
+              <button type="submit" className="flex items-center justify-center gap-2 rounded-full bg-[#1e1b18] px-6 py-3 text-sm font-semibold text-white hover:bg-[#966f3f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e1b18]">
                 <Mail className="h-4 w-4" aria-hidden="true" />Subscribe
               </button>
             </form>

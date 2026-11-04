@@ -25,10 +25,29 @@ export default function Reveal({
   );
 }
 
-export function Eyebrow({ children }: { children: ReactNode }) {
+/**
+ * Editorial section label: an optional number, a hairline rule, and an
+ * uppercase tracking label. On dark sections pass light so the label
+ * stays readable against ink.
+ */
+export function Eyebrow({
+  children,
+  number,
+  light = false,
+}: {
+  children: ReactNode;
+  number?: string;
+  light?: boolean;
+}) {
   return (
-    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-700">
-      {children}
+    <p
+      className={`flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] ${
+        light ? "text-[#c9a06a]" : "text-[#b08d57]"
+      }`}
+    >
+      {number ? <span className="font-display text-base font-semibold normal-case tracking-normal">{number}</span> : null}
+      <span aria-hidden="true" className="h-px w-10 bg-[#b08d57]/50" />
+      <span>{children}</span>
     </p>
   );
 }

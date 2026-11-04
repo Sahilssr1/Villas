@@ -3,6 +3,13 @@
 @theme {
   --font-display: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", ui-sans-system, system-ui, sans-serif;
+  --color-ink: #1e1b18;
+  --color-cream: #faf7f1;
+  --color-sand: #f5efe4;
+  --color-bronze: #b08d57;
+  --color-bronze-light: #c9a06a;
+  --color-bronze-dark: #966f3f;
+  --color-warm-grey: #6f675e;
 }
 
 html {
@@ -16,10 +23,23 @@ html {
 }
 
 body {
-  @apply bg-white font-sans text-slate-900 antialiased;
+  @apply bg-[#faf7f1] font-sans text-[#1e1b18] antialiased;
 }
 
 ::selection {
-  background: #fbbf24;
-  color: #0c2226;
+  background: #b08d57;
+  color: #ffffff;
+}
+
+/* Thin hairline rule used between editorial sections. */
+.hairline {
+  border-color: rgba(176, 141, 87, 0.35);
+}
+
+/* Subtle hover lift for bronze and outline buttons/cards. */
+.lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.lift:hover {
+  transform: translateY(-2px);
 }
