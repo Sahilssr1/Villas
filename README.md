@@ -6,12 +6,30 @@ so there was no existing codebase, backend, API or content to preserve — this
 is a new build, not a redesign of an existing site. The pattern is translated,
 not copied: no FloridaIsland branding, text, prices or photos are used.
 
+## Aerra-inspired rebuild (uncommitted, pattern only)
+
+A later restyle, built from a generic pattern description only — no demo
+code, text, images, branding, or assets were downloaded, copied, or reused:
+clean sans-serif display type (Inter for headings and body), a cold dusk
+palette (deep slate/blue-teal dark sections, off-white/pale grey light
+sections, charcoal text, warm amber only as a small accent, black pill
+buttons), a floating frosted pill navigation bar on desktop that collapses
+to a translucent top bar with a hamburger on narrower screens, dot-marked
+section labels, and flat cards with thin rules and generous padding. The
+cursor-reveal hero and drag-to-pan panoramic viewer were kept and restyled;
+the viewer is still honestly labelled as a panoramic photo, not a 360° tour.
+No extra "Who this is for" strip was added: the existing Experiences section
+already covers those ideas, and a new strip would have risked inventing
+audience claims about the villas. No active-section nav state was shipped:
+it was skipped rather than risk a broken active indicator.
+
 ## What was built
 
 A single-page Next.js site with:
 
-- Sticky header that is transparent over the hero and solid on scroll, plus
-  an accessible mobile menu that closes on link click
+- Floating frosted pill header on desktop, translucent top bar with
+  hamburger on narrower screens, plus an accessible mobile menu that closes
+  on link click
 - Full-screen hero with Framer Motion parallax, headline, and calls to action
 - Trust strip, story section, and alternating experience section
 - Villa collection (6 villas) with a working filter by Island / Coastal /

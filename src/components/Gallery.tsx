@@ -26,12 +26,12 @@ export default function Gallery() {
   }, [index, close, step]);
 
   return (
-    <section id="gallery" className="scroll-mt-24 bg-[#f5efe4] py-20 sm:py-24">
+    <section id="gallery" className="scroll-mt-24 bg-[#eef1f2] py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <Eyebrow number="04">Gallery</Eyebrow>
-          <h2 className="mt-3 font-display text-4xl font-semibold text-[#1e1b18] sm:text-5xl">See it before you book it</h2>
-          <p className="mt-4 max-w-2xl text-lg text-slate-600">Tap any photo to open it full-size. Use the arrow keys or the on-screen buttons to move through the set.</p>
+          <h2 className="mt-3 font-display text-4xl font-medium tracking-tight text-[#171a1c] sm:text-5xl">See it before you book it</h2>
+          <p className="mt-4 max-w-2xl text-lg text-slate-500">Tap any photo to open it full-size. Use the arrow keys or the on-screen buttons to move through the set.</p>
         </Reveal>
         <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {gallery.map((g, i) => (
@@ -39,7 +39,7 @@ export default function Gallery() {
               <button
                 type="button"
                 onClick={() => setIndex(i)}
-                className="group relative block h-full w-full overflow-hidden rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b08d57]"
+                className="group relative block h-full w-full overflow-hidden rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a]"
                 aria-label={`Open photo: ${g.alt}`}
               >
                 <span className={`relative block w-full overflow-hidden ${i === 0 || i === 5 ? "aspect-square" : "aspect-[4/3]"}`}>

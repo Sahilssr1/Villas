@@ -67,21 +67,21 @@ export default function InsideVillas() {
   }
 
   return (
-    <section id="inside" aria-labelledby="inside-heading" className="scroll-mt-24 bg-[#f5efe4] py-20 sm:py-24">
+    <section id="inside" aria-labelledby="inside-heading" className="scroll-mt-24 bg-[#eef1f2] py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <Eyebrow number="03">Inside the villas</Eyebrow>
-          <h2 id="inside-heading" className="mt-3 font-display text-4xl font-semibold text-[#1e1b18] sm:text-5xl">
+          <h2 id="inside-heading" className="mt-3 font-display text-4xl font-medium tracking-tight text-[#171a1c] sm:text-5xl">
             Step inside, room by room
           </h2>
-          <p className="mt-4 max-w-2xl text-lg text-[#6f675e]">
+          <p className="mt-4 max-w-2xl text-lg text-[#5b6770]">
             A panoramic drag viewer — drag the wide photo sideways to look
             across each room. This is not a 360° tour; it is a wide photograph
             you can pan across, with buttons if you prefer not to drag.
           </p>
         </Reveal>
 
-        <div role="tablist" aria-label="Choose a room to view" className="mt-8 flex flex-wrap gap-6 border-b border-[#b08d57]/25">
+        <div role="tablist" aria-label="Choose a room to view" className="mt-8 flex flex-wrap gap-6 border-b border-[#0f1e2a]/25">
           {rooms.map((r, i) => {
             const active = i === roomIndex;
             return (
@@ -91,8 +91,8 @@ export default function InsideVillas() {
                 role="tab"
                 aria-selected={active}
                 onClick={() => setRoomIndex(i)}
-                className={`-mb-px border-b-2 px-1 pb-3 text-sm font-semibold uppercase tracking-wider transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b08d57] ${
-                  active ? "border-[#b08d57] text-[#1e1b18]" : "border-transparent text-[#6f675e] hover:text-[#1e1b18]"
+                className={`-mb-px border-b-2 px-1 pb-3 text-sm font-semibold uppercase tracking-wider transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a] ${
+                  active ? "border-[#0f1e2a] text-[#171a1c]" : "border-transparent text-[#5b6770] hover:text-[#171a1c]"
                 }`}
               >
                 {r.label}
@@ -104,7 +104,7 @@ export default function InsideVillas() {
         <Reveal delay={0.1} className="mt-10">
           <div
             ref={containerRef}
-            className="relative overflow-hidden rounded-3xl shadow-xl"
+            className="relative overflow-hidden rounded-2xl shadow-none"
             aria-label={`Panoramic drag viewer: ${room.label}`}
           >
             <div className="relative aspect-[16/9] sm:aspect-[21/9]">
@@ -126,18 +126,18 @@ export default function InsideVillas() {
                 />
               </motion.div>
             </div>
-            <p className="pointer-events-none absolute left-4 top-4 flex items-center gap-2 rounded-full bg-[#1e1b18]/80 px-4 py-2 text-sm font-medium text-white">
-              <MoveHorizontal className="h-4 w-4 text-[#c9a06a]" aria-hidden="true" />
+            <p className="pointer-events-none absolute left-4 top-4 flex items-center gap-2 rounded-full bg-[#171a1c]/80 px-4 py-2 text-sm font-medium text-white">
+              <MoveHorizontal className="h-4 w-4 text-[#e8a33d]" aria-hidden="true" />
               Drag to pan · panoramic photo, not a 360° tour
             </p>
             <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-4">
-              <p className="rounded-full bg-[#1e1b18]/80 px-4 py-2 text-sm text-white">{room.caption}</p>
+              <p className="rounded-full bg-[#171a1c]/80 px-4 py-2 text-sm text-white">{room.caption}</p>
               <div className="flex shrink-0 gap-2">
                 <button
                   type="button"
                   onClick={() => step(-1)}
                   aria-label="Pan view left"
-                  className="rounded-full bg-white/95 p-3 text-[#1e1b18] shadow transition hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b08d57]"
+                  className="rounded-full bg-white/95 p-3 text-[#171a1c] shadow transition hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a]"
                 >
                   <ChevronLeft className="h-5 w-5" aria-hidden="true" />
                 </button>
@@ -145,7 +145,7 @@ export default function InsideVillas() {
                   type="button"
                   onClick={() => step(1)}
                   aria-label="Pan view right"
-                  className="rounded-full bg-white/95 p-3 text-[#1e1b18] shadow transition hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b08d57]"
+                  className="rounded-full bg-white/95 p-3 text-[#171a1c] shadow transition hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a]"
                 >
                   <ChevronRight className="h-5 w-5" aria-hidden="true" />
                 </button>

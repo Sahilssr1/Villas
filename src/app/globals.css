@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-display: "Inter", ui-sans-system, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-system, system-ui, sans-serif;
-  --color-ink: #1e1b18;
-  --color-cream: #faf7f1;
-  --color-sand: #f5efe4;
-  --color-bronze: #b08d57;
-  --color-bronze-light: #c9a06a;
-  --color-bronze-dark: #966f3f;
-  --color-warm-grey: #6f675e;
+  --color-dusk: #0f1e2a;
+  --color-dusk-light: #162e3d;
+  --color-ink: #171a1c;
+  --color-mist: #f7f8f7;
+  --color-pale: #eef1f2;
+  --color-slate-grey: #5b6770;
+  --color-amber-light: #e8a33d;
 }
 
 html {
@@ -23,20 +23,20 @@ html {
 }
 
 body {
-  @apply bg-[#faf7f1] font-sans text-[#1e1b18] antialiased;
+  @apply bg-[#f7f8f7] font-sans text-[#171a1c] antialiased;
 }
 
 ::selection {
-  background: #b08d57;
+  background: #0f1e2a;
   color: #ffffff;
 }
 
-/* Thin hairline rule used between editorial sections. */
+/* Thin rule used between editorial sections. */
 .hairline {
-  border-color: rgba(176, 141, 87, 0.35);
+  border-color: rgba(15, 30, 42, 0.15);
 }
 
-/* Subtle hover lift for bronze and outline buttons/cards. */
+/* Subtle hover lift for buttons/cards. */
 .lift {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }

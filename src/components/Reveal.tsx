@@ -26,9 +26,9 @@ export default function Reveal({
 }
 
 /**
- * Editorial section label: an optional number, a hairline rule, and an
+ * Section label: a small dot marker, an optional number, and an
  * uppercase tracking label. On dark sections pass light so the label
- * stays readable against ink.
+ * stays readable against dusk.
  */
 export function Eyebrow({
   children,
@@ -41,12 +41,12 @@ export function Eyebrow({
 }) {
   return (
     <p
-      className={`flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] ${
-        light ? "text-[#c9a06a]" : "text-[#b08d57]"
+      className={`flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.22em] ${
+        light ? "text-white/70" : "text-[#5b6770]"
       }`}
     >
-      {number ? <span className="font-display text-base font-semibold normal-case tracking-normal">{number}</span> : null}
-      <span aria-hidden="true" className="h-px w-10 bg-[#b08d57]/50" />
+      <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[#e8a33d]" />
+      {number ? <span className="text-sm font-medium normal-case tracking-normal">{number}</span> : null}
       <span>{children}</span>
     </p>
   );
