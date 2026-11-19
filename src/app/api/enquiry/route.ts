@@ -8,6 +8,7 @@ type Body = {
   guests?: unknown;
   name?: unknown;
   email?: unknown;
+  phone?: unknown;
   message?: unknown;
 };
 
@@ -19,13 +20,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Invalid JSON body." }, { status: 400 });
   }
 
-  const villaId = typeof body.villaId === "string" ? body.villaId : "";
+  const villaId =
+    typeof body.villaId === "string" && body.villaId ? body.villaId : villas[0].id;
   const name = typeof body.name === "string" ? body.name.trim() : "";
   const email = typeof body.email === "string" ? body.email.trim() : "";
   const checkIn = typeof body.checkIn === "string" ? body.checkIn : "";
   const checkOut = typeof body.checkOut === "string" ? body.checkOut : "";
   const guests = typeof body.guests === "number" ? body.guests : Number(body.guests);
-  const message = typeof body.message === "string" ? body.message.slice(0, 2000) : "";
+  const _message = typeof body.message === "string" ? body.message.slice(0, 2000) : "";
+  const _phone = typeof body.phone === "string" ? body.phone.slice(0, 50) : "";
 
   if (!villas.some((v) => v.id === villaId)) {
     return NextResponse.json({ ok: false, error: "Please choose a villa." }, { status: 400 });
@@ -45,6 +48,7 @@ export async function POST(request: Request) {
 
   // Demo only: validated and acknowledged. No email is sent and nothing is
   // stored in a database. Wire this up to a real mailbox/CRM before launch.
-  void message;
+  void _message;
+  void _phone;
   return NextResponse.json({ ok: true });
 }

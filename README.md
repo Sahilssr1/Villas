@@ -1,11 +1,8 @@
-# Villas — Private Island & Coastal Villas
+# Villas — Skandic Sanctuary Collection
 
-A premium, FloridaIsland-inspired villa-rental website built fresh in this
-repo. The repo was empty when work started (created 2026-11-04, no commits),
-so there was no existing codebase, backend, API or content to preserve — this
-is a new build, not a redesign of an existing site. The pattern is translated,
-not copied: no FloridaIsland branding, text, prices or photos are used.
+A luxury Scandinavian-inspired villa rental website built in Next.js 15 App Router, TypeScript, Tailwind CSS v4, Framer Motion, and lucide-react.
 
+<<<<<<< Updated upstream
 ## Aerra-inspired rebuild (uncommitted, pattern only)
 
 A later restyle, built from a generic pattern description only — no demo
@@ -24,9 +21,13 @@ audience claims about the villas. No active-section nav state was shipped:
 it was skipped rather than risk a broken active indicator.
 
 ## What was built
+=======
+Updated to the **Skandic** design — inspired by Nordic slow-living architecture, minimalist coastal retreats, and the archipelago landscape.
+>>>>>>> Stashed changes
 
-A single-page Next.js site with:
+## The Skandic Design System
 
+<<<<<<< Updated upstream
 - Floating frosted pill header on desktop, translucent top bar with
   hamburger on narrower screens, plus an accessible mobile menu that closes
   on link click
@@ -47,21 +48,101 @@ A single-page Next.js site with:
   headings, alt text, and JSON-LD for the site
 - Accessibility: skip link, focus-visible styles, real `<button>` elements
   for interactive controls, and `MotionConfig reducedMotion="user"`
+=======
+- **Palette**:
+  - Warm linen / pale sand background (`#FAF9F5`, `#F4F2EC`, `#EBE7DF`)
+  - Signature deep Nordic pine green (`#1F382B`, hover `#15271E`)
+  - Soft sage & moss accents (`#4E6B5A`, `#EAF0EB`, `#8FA89B`)
+  - Deep charcoal body text (`#171B18`) with muted slate (`#59635D`)
+  - Warm birch / amber accent highlights (`#C89446`)
+- **Typography & Details**:
+  - Neo-grotesque Scandinavian typography (Switzer / Inter system fallbacks) with crisp letter tracking
+  - Bracketed index kickers: `[ 01 / PHILOSOPHY ]`, `[ 02 / RESIDENCES ]`, `[ 03 / LIVING WELL ]`, `[ 04 / PERSPECTIVES ]`, `[ 05 / SEASONAL RATES ]`, `[ 06 / JOURNAL ]`, `[ 07 / COMMON QUESTIONS ]`, `[ 08 / RESERVATIONS ]`
+  - Subtle hairline borders (`border-[#1F382B]/12`) and rounded-3xl organic containers
+>>>>>>> Stashed changes
 
-## Stack
+## What Was Built
 
-Next.js 15 App Router + TypeScript + Tailwind CSS v4 + Framer Motion +
-lucide-react only. No other dependencies were added.
+1. **Atmospheric Ambient Header**:
+   - Live archipelago coordinates (`60°12'N 24°55'E // ARCHIPELAGO COAST`)
+   - Floating frosted glass header with brand mark `SKANDIC` and pine compass icon
+   - Clean navigation links with underline indicator and responsive mobile drawer
+   - Direct `Reserve Villa` action pill
 
-## Run it
+2. **Scandinavian Sanctuary Hero**:
+   - Immersive high-resolution architectural photography with subtle scroll parallax
+   - Headline: *"Architecture rooted in nature. Designed for stillness."*
+   - Property quick-bar (location, wood-fired sauna & plunge, 100% whole-house privacy, 4.98 guest rating)
+   - Dual action CTAs: `Explore Residences` & `Check Availability`
+
+3. **Guarantees Strip & Philosophy (`[ 01 / PHILOSOPHY ]`)**:
+   - 4 foundational guarantees (100% whole house privacy, private wood-fired sauna, boat transfers, direct transparent rates)
+   - Story of slow living (*Friluftsliv* & *Lagom*) with architectural photography and key stats
+
+4. **Villa Collection (`[ 02 / RESIDENCES ]`)**:
+   - 6 architectural villas with preserved IDs:
+     - `azure-palm-villa`: Villa Fjord & Sol (South Fjord)
+     - `coral-island-house`: Archipelago Island House (Private Atoll)
+     - `sunset-bay-villa`: Nordic Shoreline Pavilion (West Cape)
+     - `palm-court-residence`: Pine Grove Timber Villa (Pine Bluffs)
+     - `lagoon-view-villa`: Lagoon Sound Estate (East Sound)
+     - `seaside-garden-villa`: Coastal Meadow Cabin (East Meadow)
+   - Filter by All / Coastal / Island / Beachfront
+   - Nightly vs. Weekly pricing toggle (~15% weekly discount)
+   - Featured villa spotlight inspector panel with full architectural profile, specs, and instant reservation trigger
+
+5. **Inside The Sanctuary (`InsideVillas.tsx`)**:
+   - Interactive interior space inspector:
+     - The Great Room & Kitchen (limestone heated floors, Siberian larch slats)
+     - Wood-Fired Sauna Pavilion (Finnish cedar benches, ocean plunge)
+     - The Master Horizon Suite (Hästens mattress, limestone soaking tub)
+     - Granite Plunge & Stargazing Deck (locally quarried granite, heated mineral plunge)
+
+6. **Living Well Experiences (`[ 03 / LIVING WELL ]`)**:
+   - Wood-fired sauna & cold sea immersion
+   - Private archipelago timber launch boat days
+   - Forest trails & wild foraging
+   - Private Nordic chef hearth dinners
+
+7. **Perspectives Gallery (`[ 04 / PERSPECTIVES ]`)**:
+   - Category filtering (All, Architecture, Interiors, Wellness, Surroundings)
+   - Interactive full-screen Lightbox with keyboard navigation (Esc, Arrow Left, Arrow Right) and photo counter
+
+8. **Seasonal Rates Calendar (`[ 05 / SEASONAL RATES ]`)**:
+   - Spring Awakening (Apr – May): $720/night, 3n min
+   - Midsummer Solstice (Jun – Aug): $1,250/night, 7n min
+   - Golden Autumn & Harvest (Sep – Oct): $850/night, 3n min
+   - Winter Aurora & Stillness (Nov – Mar): $690/night, 2n min
+   - Detailed seasonal inclusions and direct booking jump
+
+9. **The Journal (`[ 06 / JOURNAL ]`)**:
+   - Editorial essays on Nordic sauna rituals, timber architecture, and wild coastal gastronomy
+
+10. **The Skandic Distinction (Honest Comparison)**:
+    - Side-by-side comparison between Skandic Villa Sanctuary vs. Luxury Resort Suite vs. Standard Vacation Rental
+
+11. **Guest Reflections & FAQ Accordion**:
+    - Notes from verified stays with villa context and star ratings
+    - Expandable accessible FAQ accordion with categorized questions
+
+12. **Direct Booking Reservation Form (`[ 08 / RESERVATIONS ]`)**:
+    - International country-code calling selector (US/CA, SE, NO, FI, UK, DE, FR, CH, NL, AU)
+    - Villa selection, check-in & check-out date pickers, guest count, and concierge requests
+    - Validated client-side and server-side, posting to `POST /api/enquiry` with full feedback state
+
+13. **Skandic Gazette Newsletter & Footer**:
+    - Minimalist quarterly dispatch subscription
+    - Coordinated footer with marina coordinates, season links, and direct contact desk
+
+## Commands
 
 ```bash
-npm install
-npm run dev     # http://localhost:3000
-npm run build   # production build
-npm run lint    # eslint
-npm run typecheck
+pnpm run typecheck  # TypeScript verification
+pnpm run lint       # ESLint verification
+pnpm run build      # Next.js production build
+pnpm run dev        # Local dev server at http://localhost:3000
 ```
+<<<<<<< Updated upstream
 
 Images are served from `images.unsplash.com` (configured in
 `next.config.ts`); the site needs network access to load them.
@@ -189,3 +270,5 @@ enquiry-only steps — no payment, bank-transfer, or door-code claims),
 form pre-selected to this villa via the optional `initialVillaId` prop on
 `EnquiryForm` (home page behaviour unchanged). The sitemap includes the
 new route. The enquiry API is unchanged (validation only).
+=======
+>>>>>>> Stashed changes
