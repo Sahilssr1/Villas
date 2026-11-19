@@ -134,7 +134,7 @@ export default function CoralIslandHousePage() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-3xl">
                 <Image
                   src={`${SK}/intro-kitchen.jpeg`}
                   alt="Timber kitchen inside the house"
@@ -358,7 +358,7 @@ export default function CoralIslandHousePage() {
             {areaHighlights.map((e, i) => (
               <Reveal key={e.title} delay={i * 0.05}>
                 <article className="h-full overflow-hidden rounded-3xl bg-white ring-1 ring-black/5">
-                  <span className="relative block aspect-[4/3]">
+                  <span className="relative block aspect-[16/10]">
                     <Image
                       src={aroundImages[i].src}
                       alt={aroundImages[i].alt}

@@ -65,7 +65,7 @@ export function FeaturedStay() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="grid items-center gap-10 overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200 lg:grid-cols-2">
-            <div className="relative block aspect-[16/10] w-full overflow-hidden lg:aspect-auto lg:h-full lg:min-h-[320px]">
+            <div className="relative block aspect-[16/10] w-full overflow-hidden lg:aspect-auto lg:h-full lg:min-h-[280px]">
               <Image
                 src={villa.image}
                 alt={`${villa.name} in ${villa.location}`}
@@ -490,13 +490,13 @@ export function FeaturedStrip({ images }: { images: GalleryImage[] }) {
         {images.map((g) => (
           <figure
             key={g.src}
-            className="group relative h-[420px] w-[78vw] shrink-0 snap-start overflow-hidden rounded-3xl sm:h-[520px] sm:w-[360px]"
+            className="group relative h-[360px] w-[72vw] shrink-0 snap-start overflow-hidden rounded-3xl sm:h-[440px] sm:w-[320px]"
           >
             <Image
               src={g.src}
               alt={g.alt}
               fill
-              sizes="(max-width: 640px) 78vw, 360px"
+              sizes="(max-width: 640px) 72vw, 320px"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-5 pb-4 pt-10 text-sm font-medium text-white">
@@ -530,7 +530,7 @@ export function FeaturedHouseGrid({ images }: { images: GalleryImage[] }) {
             type="button"
             onClick={() => setIndex(i)}
             aria-label={`Open photo: ${g.alt}`}
-            className="group relative block aspect-[4/3] overflow-hidden rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            className="group relative block aspect-[16/10] overflow-hidden rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             <Image
               src={g.src}
@@ -564,7 +564,7 @@ export function FeaturedCarousel({ images }: { images: GalleryImage[] }) {
   return (
     <div>
       <div className="relative overflow-hidden rounded-3xl bg-black">
-        <div className="relative aspect-[16/10] sm:aspect-[16/8]" aria-live="polite">
+        <div className="relative aspect-[16/9] sm:aspect-[16/7]" aria-live="polite">
           {images.map((g, i) => (
             <Image
               key={g.src}

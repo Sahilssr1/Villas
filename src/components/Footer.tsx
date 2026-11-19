@@ -33,7 +33,7 @@ export default function Footer() {
             <h2 className="font-semibold text-white">Contact</h2>
             <p className="mt-4 flex items-center gap-2"><Mail className="h-4 w-4 text-[#e8a33d]" aria-hidden="true" /><a href="mailto:hello@villas.example" className="hover:text-white hover:underline">hello@villas.example</a></p>
             <p className="mt-3 text-sm leading-relaxed">Placeholder contact for this demo. Replace with the real business email, phone and address before launch.</p>
-            <Link href="#enquiry" className="lift mt-5 inline-block rounded-full bg-[#0f1e2a] px-5 py-2.5 text-sm font-semibold text-[#171a1c] transition hover:bg-[#e8a33d]">Check availability</Link>
+            <Link href="#enquiry" className="lift mt-5 inline-block rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#171a1c] transition hover:bg-[#e8a33d]">Check availability</Link>
           </div>
         </div>
         <div className="mt-12 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-sm sm:flex-row">
