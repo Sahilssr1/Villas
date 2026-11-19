@@ -39,7 +39,7 @@ export default function Header() {
           className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 text-[#171a1c] sm:px-6 lg:px-6"
         >
           <Link href="#top" className="flex items-center gap-2" aria-label="Villas home">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0f1e2a] text-white">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2e5b3a] text-white">
               <Waves className="h-5 w-5" aria-hidden="true" />
             </span>
             <span className="text-xl font-medium tracking-tight">Villas</span>
@@ -61,7 +61,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="#enquiry"
-              className="hidden rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0f1e2a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:inline-block"
+              className="hidden rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#171a1c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:inline-block"
             >
               Check availability
             </Link>

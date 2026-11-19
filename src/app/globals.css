@@ -3,13 +3,11 @@
 @theme {
   --font-display: "Inter", ui-sans-system, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-system, system-ui, sans-serif;
-  --color-dusk: #0f1e2a;
-  --color-dusk-light: #162e3d;
+  --color-forest: #2e5b3a;
+  --color-forest-light: #8fbf9a;
   --color-ink: #171a1c;
-  --color-mist: #f7f8f7;
-  --color-pale: #eef1f2;
-  --color-slate-grey: #5b6770;
-  --color-amber-light: #e8a33d;
+  --color-warm: #f5f3f0;
+  --color-grey: #5b6770;
 }
 
 html {
@@ -23,17 +21,17 @@ html {
 }
 
 body {
-  @apply bg-[#f7f8f7] font-sans text-[#171a1c] antialiased;
+  @apply bg-white font-sans text-[#171a1c] antialiased;
 }
 
 ::selection {
-  background: #0f1e2a;
+  background: #2e5b3a;
   color: #ffffff;
 }
 
 /* Thin rule used between editorial sections. */
 .hairline {
-  border-color: rgba(15, 30, 42, 0.15);
+  border-color: rgba(23, 26, 28, 0.1);
 }
 
 /* Subtle hover lift for buttons/cards. */

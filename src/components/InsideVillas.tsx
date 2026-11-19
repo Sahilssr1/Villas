@@ -67,7 +67,7 @@ export default function InsideVillas() {
   }
 
   return (
-    <section id="inside" aria-labelledby="inside-heading" className="scroll-mt-24 bg-[#eef1f2] py-20 sm:py-24">
+    <section id="inside" aria-labelledby="inside-heading" className="scroll-mt-24 bg-[#f5f3f0] py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <Eyebrow number="03">Inside the villas</Eyebrow>
@@ -81,7 +81,7 @@ export default function InsideVillas() {
           </p>
         </Reveal>
 
-        <div role="tablist" aria-label="Choose a room to view" className="mt-8 flex flex-wrap gap-6 border-b border-[#0f1e2a]/25">
+        <div role="tablist" aria-label="Choose a room to view" className="mt-8 flex flex-wrap gap-6 border-b border-black/10">
           {rooms.map((r, i) => {
             const active = i === roomIndex;
             return (
@@ -91,8 +91,8 @@ export default function InsideVillas() {
                 role="tab"
                 aria-selected={active}
                 onClick={() => setRoomIndex(i)}
-                className={`-mb-px border-b-2 px-1 pb-3 text-sm font-semibold uppercase tracking-wider transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a] ${
-                  active ? "border-[#0f1e2a] text-[#171a1c]" : "border-transparent text-[#5b6770] hover:text-[#171a1c]"
+                className={`-mb-px border-b-2 px-1 pb-3 text-sm font-semibold uppercase tracking-wider transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2e5b3a] ${
+                  active ? "border-[#2e5b3a] text-[#171a1c]" : "border-transparent text-[#5b6770] hover:text-[#171a1c]"
                 }`}
               >
                 {r.label}
@@ -127,7 +127,7 @@ export default function InsideVillas() {
               </motion.div>
             </div>
             <p className="pointer-events-none absolute left-4 top-4 flex items-center gap-2 rounded-full bg-[#171a1c]/80 px-4 py-2 text-sm font-medium text-white">
-              <MoveHorizontal className="h-4 w-4 text-[#e8a33d]" aria-hidden="true" />
+              <MoveHorizontal className="h-4 w-4 text-[#8fbf9a]" aria-hidden="true" />
               Drag to pan · panoramic photo, not a 360° tour
             </p>
             <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-4">
@@ -137,7 +137,7 @@ export default function InsideVillas() {
                   type="button"
                   onClick={() => step(-1)}
                   aria-label="Pan view left"
-                  className="rounded-full bg-white/95 p-3 text-[#171a1c] shadow transition hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a]"
+                  className="rounded-full bg-white/95 p-3 text-[#171a1c] shadow transition hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
                   <ChevronLeft className="h-5 w-5" aria-hidden="true" />
                 </button>
@@ -145,7 +145,7 @@ export default function InsideVillas() {
                   type="button"
                   onClick={() => step(1)}
                   aria-label="Pan view right"
-                  className="rounded-full bg-white/95 p-3 text-[#171a1c] shadow transition hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a]"
+                  className="rounded-full bg-white/95 p-3 text-[#171a1c] shadow transition hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
                   <ChevronRight className="h-5 w-5" aria-hidden="true" />
                 </button>

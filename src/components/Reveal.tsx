@@ -26,9 +26,10 @@ export default function Reveal({
 }
 
 /**
- * Section label: a small dot marker, an optional number, and an
- * uppercase tracking label. On dark sections pass light so the label
- * stays readable against dusk.
+ * Section label, Skandic style: "01 — INTRODUCTION" — a forest-green
+ * number, an em-dash separator, and a wide-tracked small-caps label.
+ * Mirrors SkandicEyebrow in FeaturedLanding.tsx. The light variant is
+ * kept for dark backgrounds (light-green number on white/70 text).
  */
 export function Eyebrow({
   children,
@@ -41,13 +42,19 @@ export function Eyebrow({
 }) {
   return (
     <p
-      className={`flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.22em] ${
+      className={`text-xs font-semibold uppercase tracking-[0.3em] ${
         light ? "text-white/70" : "text-[#5b6770]"
       }`}
     >
-      <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[#e8a33d]" />
-      {number ? <span className="text-sm font-medium normal-case tracking-normal">{number}</span> : null}
-      <span>{children}</span>
+      {number ? (
+        <>
+          <span style={{ color: light ? "#8fbf9a" : "#2e5b3a" }}>{number}</span>
+          <span aria-hidden="true" className="mx-2">
+            —
+          </span>
+        </>
+      ) : null}
+      {children}
     </p>
   );
 }

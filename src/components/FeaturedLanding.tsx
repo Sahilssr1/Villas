@@ -55,16 +55,18 @@ export function SkandicEyebrow({
 }
 
 /* ------------------------------------------------------------------ */
-/* Featured stay banner, shown on the home page (home design kept).    */
+/* Featured stay banner, shown on the home page only (the landing page */
+/* never renders it). Light Skandic styling, matching the rest of the  */
+/* home page after the 2026-11-19 restyle.                             */
 /* ------------------------------------------------------------------ */
 
 export function FeaturedStay() {
   const villa = villas.find((v) => v.id === "coral-island-house") ?? villas[0];
   return (
-    <section aria-labelledby="featured-stay-heading" className="bg-[#0f1e2a] py-20 sm:py-24">
+    <section aria-labelledby="featured-stay-heading" className="bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="grid items-center gap-10 overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200 lg:grid-cols-2">
+          <div className="grid items-center gap-10 overflow-hidden rounded-2xl bg-white ring-1 ring-black/5 lg:grid-cols-2">
             <div className="relative block aspect-[16/10] w-full overflow-hidden lg:aspect-auto lg:h-full lg:min-h-[280px]">
               <Image
                 src={villa.image}
@@ -85,7 +87,7 @@ export function FeaturedStay() {
               </p>
               <Link
                 href="/villas/coral-island-house"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#0f1e2a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#171a1c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               >
                 See the featured stay <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>

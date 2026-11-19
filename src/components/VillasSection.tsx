@@ -13,7 +13,7 @@ const tabs: ("All" | VillaType)[] = ["All", "Island", "Coastal", "Beachfront"];
 function Spec({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
     <li className="flex items-center gap-1.5">
-      <span className="text-[#0f1e2a]">{icon}</span>
+      <span className="text-[#2e5b3a]">{icon}</span>
       {label}
     </li>
   );
@@ -46,7 +46,7 @@ function TileRevealPhoto({ villa }: { villa: Villa }) {
               initial={{ opacity: 1, scale: 1 }}
               animate={{ opacity: 0, scale: 0.85 }}
               transition={{ duration: 0.4, delay: (row + col) * 0.045, ease: "easeOut" }}
-              className="pointer-events-none bg-[#f7f8f7]"
+              className="pointer-events-none bg-[#f5f3f0]"
             />
           );
         })}
@@ -92,7 +92,7 @@ export default function VillasSection() {
   }
 
   return (
-    <section id="villas" className="scroll-mt-24 bg-[#f7f8f7] py-20 sm:py-24">
+    <section id="villas" className="scroll-mt-24 bg-[#f5f3f0] py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <Eyebrow number="02">The collection</Eyebrow>
@@ -108,7 +108,7 @@ export default function VillasSection() {
           role="tablist"
           aria-label="Filter villas by type"
           onKeyDown={onTabKeyDown}
-          className="mt-8 flex flex-wrap gap-6 border-b border-[#0f1e2a]/25"
+          className="mt-8 flex flex-wrap gap-6 border-b border-black/10"
         >
           {tabs.map((t, i) => {
             const active = tab === t;
@@ -122,8 +122,8 @@ export default function VillasSection() {
                 role="tab"
                 aria-selected={active}
                 onClick={() => selectTab(t)}
-                className={`-mb-px border-b-2 px-1 pb-3 text-sm font-semibold uppercase tracking-wider transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a] ${
-                  active ? "border-[#0f1e2a] text-[#171a1c]" : "border-transparent text-[#5b6770] hover:text-[#171a1c]"
+                className={`-mb-px border-b-2 px-1 pb-3 text-sm font-semibold uppercase tracking-wider transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2e5b3a] ${
+                  active ? "border-[#2e5b3a] text-[#171a1c]" : "border-transparent text-[#5b6770] hover:text-[#171a1c]"
                 }`}
               >
                 {t}
@@ -141,8 +141,8 @@ export default function VillasSection() {
               type="button"
               aria-pressed={priceMode === mode}
               onClick={() => setPriceMode(mode)}
-              className={`rounded-full px-4 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a] ${
-                priceMode === mode ? "bg-[#171a1c] text-white" : "bg-white text-[#5b6770] ring-1 ring-[#0f1e2a]/40 hover:text-[#171a1c]"
+              className={`rounded-full px-4 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2e5b3a] ${
+                priceMode === mode ? "bg-[#171a1c] text-white" : "bg-white text-[#5b6770] ring-1 ring-black/15 hover:text-[#171a1c]"
               }`}
             >
               {mode === "nightly" ? "Nightly" : "Weekly"}
@@ -160,7 +160,7 @@ export default function VillasSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0f1e2a]">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#2e5b3a]">
                 Featured · {featured.type} · {featured.location}
               </p>
               <h3 className="mt-3 font-display text-4xl font-medium tracking-tight text-[#171a1c]">{featured.name}</h3>
@@ -174,11 +174,11 @@ export default function VillasSection() {
               <ul className="mt-5 grid gap-1.5 sm:grid-cols-2">
                 {featured.amenities.map((a) => (
                   <li key={a} className="flex items-center gap-2 text-sm text-[#171a1c]">
-                    <Check className="h-4 w-4 shrink-0 text-[#0f1e2a]" aria-hidden="true" />{a}
+                    <Check className="h-4 w-4 shrink-0 text-[#2e5b3a]" aria-hidden="true" />{a}
                   </li>
                 ))}
               </ul>
-              <div className="mt-7 flex flex-wrap items-center gap-5 border-t border-[#0f1e2a]/25 pt-6">
+              <div className="mt-7 flex flex-wrap items-center gap-5 border-t border-black/10 pt-6">
                 <p>
                   <span className="font-display text-3xl font-medium tracking-tight text-[#171a1c]">{price(featured).amount}</span>
                   <span className="text-sm text-[#5b6770]"> {price(featured).unit}</span>
@@ -188,7 +188,7 @@ export default function VillasSection() {
                       : `${formatPrice(featured.pricePerNight)} / night`}
                   </span>
                 </p>
-                <Link href="#enquiry" className="lift inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#0f1e2a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a]">
+                <Link href="#enquiry" className="lift inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#171a1c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
                   Enquire about {featured.name} <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </div>
@@ -209,7 +209,7 @@ export default function VillasSection() {
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 onClick={() => setFeaturedId(villa.id)}
                 className={`group cursor-pointer overflow-hidden rounded-2xl bg-white shadow-none ring-1 transition-shadow hover:shadow-none ${
-                  isFeatured ? "ring-2 ring-[#0f1e2a]" : "ring-[#0f1e2a]/20"
+                  isFeatured ? "ring-2 ring-[#2e5b3a]" : "ring-black/10"
                 }`}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -224,7 +224,7 @@ export default function VillasSection() {
                     {villa.type} · {villa.location}
                   </span>
                   {isFeatured ? (
-                    <span className="absolute right-4 top-4 rounded-full bg-[#0f1e2a] px-3 py-1 text-xs font-semibold text-white">
+                    <span className="absolute right-4 top-4 rounded-full bg-[#2e5b3a] px-3 py-1 text-xs font-semibold text-white">
                       Featured
                     </span>
                   ) : null}
@@ -238,7 +238,7 @@ export default function VillasSection() {
                     <Spec icon={<Bath className="h-4 w-4" aria-hidden="true" />} label={`${villa.bathrooms} bathrooms`} />
                     <Spec icon={<Ruler className="h-4 w-4" aria-hidden="true" />} label={`${villa.areaSqFt.toLocaleString()} sq ft`} />
                   </ul>
-                  <div className="mt-6 flex items-end justify-between border-t border-[#0f1e2a]/25 pt-5">
+                  <div className="mt-6 flex items-end justify-between border-t border-black/10 pt-5">
                     <p>
                       <span className="font-display text-2xl font-medium tracking-tight text-[#171a1c]">{price(villa).amount}</span>
                       <span className="text-sm text-[#5b6770]"> {price(villa).unit}</span>
@@ -246,13 +246,13 @@ export default function VillasSection() {
                     <button
                       type="button"
                       onClick={() => setFeaturedId(villa.id)}
-                      className="flex items-center gap-1 text-sm font-semibold text-[#0f1e2a] hover:text-[#171a1c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a]"
+                      className="flex items-center gap-1 text-sm font-semibold text-[#2e5b3a] hover:text-[#171a1c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2e5b3a]"
                     >
                       View details <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </button>
                   </div>
                   <div className="mt-4" onClick={(e) => e.stopPropagation()}>
-                    <Link href="#enquiry" className="inline-block rounded-full bg-[#171a1c] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0f1e2a] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a]">
+                    <Link href="#enquiry" className="inline-block rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#171a1c] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
                       Enquire
                     </Link>
                   </div>
