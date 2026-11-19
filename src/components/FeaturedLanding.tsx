@@ -226,7 +226,6 @@ const heroChapters: HeroChapter[] = [
     src: "/skandic/hero-bedroom.jpeg",
     alt: "Bedroom with floor-to-ceiling windows facing the water",
   },
-  { id: "outlook", label: "Outlook", kind: "image", src: "/skandic/hero-01.png", alt: "View of the house and its setting" },
   { id: "sky", label: "The Sky", kind: "image", src: "/skandic/hero-02.jpeg", alt: "View of the house and its setting" },
   { id: "isles", label: "The Isles", kind: "image", src: "/skandic/hero-03.png", alt: "View of the house and its setting" },
   { id: "quiet", label: "The Quiet", kind: "image", src: "/skandic/hero-04.png", alt: "View of the house and its setting" },

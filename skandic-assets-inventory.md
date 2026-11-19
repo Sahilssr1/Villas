@@ -24,7 +24,7 @@ repo is a grey area — flag it again before any use.
 ## Images (36 on the homepage, in page order)
 
 Hero — crossfade layers (7):
-1. https://framerusercontent.com/images/fF1pxVTftg2OjfDRlVah6N5Bw.png (hero layer)
+1. https://framerusercontent.com/images/fF1pxVTftg2OjfDRlVah6N5Bw.png (hero layer — turned out to be Skandic's giant "SK" monogram graphic, NOT a photo; used briefly as the "Outlook" hero chapter, then REMOVED from the page and deleted from public/skandic/ on 2026-11-19 at the user's request after he spotted it live)
 2. https://framerusercontent.com/images/SrrFvkBldfkJ3UQynbt6kDoQnAA.png (video poster — cabin, misty fjord)
 3. https://framerusercontent.com/images/cdMQTzOtnb5AqPvwo9WGhZ7oVk.jpeg (hero chapter)
 4. https://framerusercontent.com/images/vMYhilVk08k3LZ5QxhNld3VVQGQ.jpeg (bedroom, floor-to-ceiling fjord view, 1672x941)
