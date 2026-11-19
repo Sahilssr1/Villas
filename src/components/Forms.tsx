@@ -5,7 +5,7 @@ import { CheckCircle2, Loader2, Mail, Send } from "lucide-react";
 import { villas } from "@/data/villas";
 import Reveal, { Eyebrow } from "./Reveal";
 
-const inputCls = "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-[#171a1c] placeholder:text-slate-400 focus:border-[#0f1e2a] focus:outline-2 focus:outline-[#0f1e2a]";
+const inputCls = "w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-[#171a1c] placeholder:text-slate-400 focus:border-[#0f1e2a] focus:outline-2 focus:outline-[#0f1e2a]";
 const labelCls = "mb-1.5 block text-sm font-semibold text-[#171a1c]";
 
 export function EnquiryForm({ initialVillaId }: { initialVillaId?: string } = {}) {
@@ -55,9 +55,9 @@ export function EnquiryForm({ initialVillaId }: { initialVillaId?: string } = {}
   }
 
   return (
-    <section id="enquiry" className="scroll-mt-24 bg-[#0f1e2a] py-20 sm:py-24">
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-5 lg:px-8">
-        <Reveal className="lg:col-span-2">
+    <section id="enquiry" className="scroll-mt-24 bg-[#0f1e2a] py-16 sm:py-20">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-5 lg:gap-12 lg:px-8">
+        <Reveal className="lg:col-span-3">
           <Eyebrow number="09" light>Your villa is waiting</Eyebrow>
           <h2 className="mt-3 font-display text-4xl font-medium tracking-tight text-white sm:text-5xl">Check availability</h2>
           <p className="mt-4 text-lg leading-relaxed text-white/80">
@@ -71,17 +71,17 @@ export function EnquiryForm({ initialVillaId }: { initialVillaId?: string } = {}
             <li>· Reply within one working day (demo: no email is sent yet)</li>
           </ul>
         </Reveal>
-        <Reveal delay={0.1} className="lg:col-span-3">
+        <Reveal delay={0.1} className="lg:col-span-2">
           {sent ? (
-            <div className="rounded-2xl bg-white p-8 text-center shadow-none ring-1 ring-slate-200" role="status">
+            <div className="rounded-2xl bg-white p-6 text-center shadow-none ring-1 ring-slate-200" role="status">
               <CheckCircle2 className="mx-auto h-12 w-12 text-[#0f1e2a]" aria-hidden="true" />
               <h3 className="mt-4 font-display text-2xl font-medium tracking-tight text-[#171a1c]">Enquiry received — thank you, {name.split(" ")[0]}.</h3>
               <p className="mt-2 text-slate-500">In the live site this would go to the bookings team. In this demo it is validated and acknowledged only — no email or database is involved.</p>
               <button type="button" onClick={() => setSent(false)} className="mt-6 rounded-full bg-[#171a1c] px-6 py-3 text-sm font-semibold text-white hover:bg-[#0f1e2a]">Send another enquiry</button>
             </div>
           ) : (
-            <form onSubmit={onSubmit} noValidate className="rounded-2xl bg-white p-6 shadow-none ring-1 ring-slate-200 sm:p-8">
-              <div className="grid gap-5 sm:grid-cols-2">
+            <form onSubmit={onSubmit} noValidate className="rounded-2xl bg-white p-5 shadow-none ring-1 ring-slate-200 sm:p-6">
+              <div className="grid gap-4 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                   <label htmlFor="villa" className={labelCls}>Villa</label>
                   <select id="villa" value={villaId} onChange={(e) => setVillaId(e.target.value)} className={inputCls}>
@@ -110,11 +110,11 @@ export function EnquiryForm({ initialVillaId }: { initialVillaId?: string } = {}
                 </div>
                 <div className="sm:col-span-2">
                   <label htmlFor="message" className={labelCls}>Anything else? <span className="font-normal text-slate-500">(optional)</span></label>
-                  <textarea id="message" rows={4} value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Celebration, pets, boat trips, dietary needs…" className={inputCls} />
+                  <textarea id="message" rows={3} value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Celebration, pets, boat trips, dietary needs…" className={inputCls} />
                 </div>
               </div>
               {error && <p role="alert" className="mt-5 rounded-xl bg-red-50 px-4 py-3 text-sm font-medium text-red-700">{error}</p>}
-              <button type="submit" disabled={loading} className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-black px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#0f1e2a] disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a]">
+              <button type="submit" disabled={loading} className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-black px-7 py-3 text-sm font-semibold text-white transition hover:bg-[#0f1e2a] disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0f1e2a]">
                 {loading ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" /> : <Send className="h-5 w-5" aria-hidden="true" />}
                 {loading ? "Sending…" : "Send enquiry"}
               </button>
