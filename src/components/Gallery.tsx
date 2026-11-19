@@ -36,14 +36,6 @@ export default function Gallery() {
   }, [index, close, step]);
 
   return (
-<<<<<<< Updated upstream
-    <section id="gallery" className="scroll-mt-24 bg-white py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal>
-          <Eyebrow number="04">Gallery</Eyebrow>
-          <h2 className="mt-3 font-display text-4xl font-medium tracking-tight text-[#171a1c] sm:text-5xl">See it before you book it</h2>
-          <p className="mt-4 max-w-2xl text-lg text-[#5b6770]">Tap any photo to open it full-size. Use the arrow keys or the on-screen buttons to move through the set.</p>
-=======
     <section id="gallery" className="scroll-mt-24 border-t border-[#1F382B]/10 bg-[#FAF9F5] py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
@@ -83,7 +75,6 @@ export default function Gallery() {
             Tap any photograph to launch the full-screen architectural gallery. Use keyboard arrows
             or on-screen controls to navigate.
           </p>
->>>>>>> Stashed changes
         </Reveal>
 
         {/* Gallery Grid */}
@@ -97,13 +88,8 @@ export default function Gallery() {
               <button
                 type="button"
                 onClick={() => setIndex(i)}
-<<<<<<< Updated upstream
-                className="group relative block h-full w-full overflow-hidden rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                aria-label={`Open photo: ${g.alt}`}
-=======
                 className="group relative block h-full w-full overflow-hidden rounded-2xl border border-[#1F382B]/15 bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1F382B]"
                 aria-label={`Open photo: ${g.title || g.alt}`}
->>>>>>> Stashed changes
               >
                 <span
                   className={`relative block w-full overflow-hidden ${

@@ -12,10 +12,6 @@ import {
 import { villas } from "@/data/villas";
 import Reveal from "./Reveal";
 
-<<<<<<< Updated upstream
-const inputCls = "w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-[#171a1c] placeholder:text-slate-400 focus:border-[#2e5b3a] focus:outline-2 focus:outline-[#2e5b3a]";
-const labelCls = "mb-1.5 block text-sm font-semibold text-[#171a1c]";
-=======
 const inputCls =
   "w-full rounded-xl border border-[#1F382B]/20 bg-white px-4 py-3 text-sm text-[#171B18] placeholder:text-[#59635D]/50 transition focus:border-[#1F382B] focus:outline-2 focus:outline-[#1F382B]";
 const labelCls = "mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#171B18]";
@@ -32,7 +28,6 @@ const countryCodes = [
   { code: "+31", label: "NL (+31)" },
   { code: "+61", label: "AU (+61)" },
 ];
->>>>>>> Stashed changes
 
 export function EnquiryForm({ initialVillaId }: { initialVillaId?: string } = {}) {
   const [villaId, setVillaId] = useState(
@@ -97,35 +92,6 @@ export function EnquiryForm({ initialVillaId }: { initialVillaId?: string } = {}
   const selectedVilla = villas.find((v) => v.id === villaId) || villas[0];
 
   return (
-<<<<<<< Updated upstream
-    <section id="enquiry" className="scroll-mt-24 bg-[#f5f3f0] py-16 sm:py-20">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-5 lg:gap-12 lg:px-8">
-        <Reveal className="lg:col-span-3">
-          <Eyebrow number="09">Your villa is waiting</Eyebrow>
-          <h2 className="mt-3 font-display text-4xl font-medium tracking-tight text-[#171a1c] sm:text-5xl">Check availability</h2>
-          <p className="mt-4 text-lg leading-relaxed text-[#5b6770]">
-            Tell us which villa and when. We confirm availability and send a
-            booking summary — this form does not charge you or create a booking
-            on its own.
-          </p>
-          <ul className="mt-8 space-y-3 text-[#5b6770]">
-            <li>· 7-night minimum for island villas</li>
-            <li>· Boat transfers included for island stays</li>
-            <li>· Reply within one working day (demo: no email is sent yet)</li>
-          </ul>
-        </Reveal>
-        <Reveal delay={0.1} className="lg:col-span-2">
-          {sent ? (
-            <div className="rounded-2xl bg-white p-6 text-center shadow-none ring-1 ring-black/5" role="status">
-              <CheckCircle2 className="mx-auto h-12 w-12 text-[#2e5b3a]" aria-hidden="true" />
-              <h3 className="mt-4 font-display text-2xl font-medium tracking-tight text-[#171a1c]">Enquiry received — thank you, {name.split(" ")[0]}.</h3>
-              <p className="mt-2 text-[#5b6770]">In the live site this would go to the bookings team. In this demo it is validated and acknowledged only — no email or database is involved.</p>
-              <button type="button" onClick={() => setSent(false)} className="mt-6 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white hover:bg-[#171a1c]">Send another enquiry</button>
-            </div>
-          ) : (
-            <form onSubmit={onSubmit} noValidate className="rounded-2xl bg-white p-5 shadow-none ring-1 ring-black/5 sm:p-6">
-              <div className="grid gap-4 sm:grid-cols-2">
-=======
     <section id="enquiry" className="scroll-mt-24 border-t border-[#1F382B]/10 bg-[#15271E] py-20 text-white sm:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
         {/* Left Column: Context & Guarantees */}
@@ -225,7 +191,6 @@ export function EnquiryForm({ initialVillaId }: { initialVillaId?: string } = {}
 
               <div className="grid gap-5 sm:grid-cols-2">
                 {/* Villa Selector */}
->>>>>>> Stashed changes
                 <div className="sm:col-span-2">
                   <label htmlFor="villa" className={labelCls}>
                     Select Residence
@@ -356,22 +321,6 @@ export function EnquiryForm({ initialVillaId }: { initialVillaId?: string } = {}
 
                 {/* Special Requests / Notes */}
                 <div className="sm:col-span-2">
-<<<<<<< Updated upstream
-                  <label htmlFor="email" className={labelCls}>Email</label>
-                  <input id="email" type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" className={inputCls} />
-                </div>
-                <div className="sm:col-span-2">
-                  <label htmlFor="message" className={labelCls}>Anything else? <span className="font-normal text-[#5b6770]">(optional)</span></label>
-                  <textarea id="message" rows={3} value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Celebration, pets, boat trips, dietary needs…" className={inputCls} />
-                </div>
-              </div>
-              {error && <p role="alert" className="mt-5 rounded-xl bg-red-50 px-4 py-3 text-sm font-medium text-red-700">{error}</p>}
-              <button type="submit" disabled={loading} className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-black px-7 py-3 text-sm font-semibold text-white transition hover:bg-[#171a1c] disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
-                {loading ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" /> : <Send className="h-5 w-5" aria-hidden="true" />}
-                {loading ? "Sending…" : "Send enquiry"}
-              </button>
-              <p className="mt-3 text-center text-xs text-[#5b6770]">Demo form: validated and acknowledged only. No payment, email or booking is created.</p>
-=======
                   <label htmlFor="message" className={labelCls}>
                     Special Requests or Arrival Notes (Optional)
                   </label>
@@ -409,7 +358,6 @@ export function EnquiryForm({ initialVillaId }: { initialVillaId?: string } = {}
                   No payment charged now &middot; 48-hour hold
                 </p>
               </div>
->>>>>>> Stashed changes
             </form>
           )}
         </Reveal>
@@ -430,23 +378,6 @@ export function Newsletter() {
   }
 
   return (
-<<<<<<< Updated upstream
-    <section aria-labelledby="newsletter-heading" className="bg-white py-16">
-      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-        <Reveal>
-          <h2 id="newsletter-heading" className="font-display text-3xl font-medium tracking-tight text-[#171a1c] sm:text-4xl">Be first to hear about rare openings</h2>
-          <p className="mt-3 text-[#171a1c]/80">New dates, island weeks and quiet-season offers — no spam, and no fake subscription in this demo.</p>
-          {done ? (
-            <p role="status" className="mx-auto mt-6 flex max-w-md items-center justify-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-[#171a1c]">
-              <CheckCircle2 className="h-5 w-5 text-[#2e5b3a]" aria-hidden="true" />Thanks — you are on the list (demo confirmation).
-            </p>
-          ) : (
-            <form onSubmit={onSubmit} noValidate className="mx-auto mt-6 flex max-w-md flex-col gap-3 sm:flex-row">
-              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
-              <input id="newsletter-email" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" className="flex-1 rounded-full border border-[#171a1c]/20 bg-white px-5 py-3 text-[#171a1c] placeholder:text-slate-400 focus:outline-2 focus:outline-[#171a1c]" />
-              <button type="submit" className="flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white hover:bg-[#171a1c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
-                <Mail className="h-4 w-4" aria-hidden="true" />Subscribe
-=======
     <section id="newsletter" className="border-t border-[#1F382B]/10 bg-[#FAF9F5] py-16 sm:py-20">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
         <Reveal>
@@ -485,7 +416,6 @@ export function Newsletter() {
               >
                 <span>Subscribe</span>
                 <ArrowRight className="h-3.5 w-3.5" />
->>>>>>> Stashed changes
               </button>
             </form>
           )}

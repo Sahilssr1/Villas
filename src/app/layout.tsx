@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
-<<<<<<< Updated upstream
-import { Inter } from "next/font/google";
-=======
->>>>>>> Stashed changes
 import { MotionConfig } from "framer-motion";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-<<<<<<< Updated upstream
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-
-=======
->>>>>>> Stashed changes
 export const metadata: Metadata = {
   metadataBase: new URL("https://villas.example"),
   title: "Skandic — Home Rental in Lofoten, Norway",
@@ -54,14 +45,6 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-<<<<<<< Updated upstream
-    <html lang="en" className={inter.variable}>
-      <body>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-black focus:px-5 focus:py-2.5 focus:font-semibold focus:text-white"
-=======
     <html lang="en">
       <body className="bg-[#FAF9F6] text-[#1E201E] antialiased">
         <script
@@ -71,7 +54,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-[#1F382B] focus:px-5 focus:py-2.5 focus:font-semibold focus:text-white"
->>>>>>> Stashed changes
         >
           Skip to main content
         </a>

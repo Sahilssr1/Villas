@@ -25,39 +25,6 @@ export default function Reveal({
   );
 }
 
-<<<<<<< Updated upstream
-/**
- * Section label, Skandic style: "01 — INTRODUCTION" — a forest-green
- * number, an em-dash separator, and a wide-tracked small-caps label.
- * Mirrors SkandicEyebrow in FeaturedLanding.tsx. The light variant is
- * kept for dark backgrounds (light-green number on white/70 text).
- */
-export function Eyebrow({
-  children,
-  number,
-  light = false,
-}: {
-  children: ReactNode;
-  number?: string;
-  light?: boolean;
-}) {
-  return (
-    <p
-      className={`text-xs font-semibold uppercase tracking-[0.3em] ${
-        light ? "text-white/70" : "text-[#5b6770]"
-      }`}
-    >
-      {number ? (
-        <>
-          <span style={{ color: light ? "#8fbf9a" : "#2e5b3a" }}>{number}</span>
-          <span aria-hidden="true" className="mx-2">
-            —
-          </span>
-        </>
-      ) : null}
-      {children}
-    </p>
-=======
 export function Eyebrow({
   children,
   number,
@@ -95,6 +62,5 @@ export function SkandicTag({
       {code ? <span className="text-[#4E6B5A]">{code} {"//"}</span> : null}
       <span>{children}</span>
     </span>
->>>>>>> Stashed changes
   );
 }

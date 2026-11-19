@@ -34,16 +34,6 @@ export function TrustStrip() {
   ];
 
   return (
-<<<<<<< Updated upstream
-    <section aria-label="Why book with Villas" className="border-b border-black/10 bg-[#f5f3f0] py-10">
-      <ul className="mx-auto grid max-w-7xl gap-6 px-4 text-center sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
-        {items.map((item) => (
-          <li key={item} className="flex items-center justify-center gap-2 text-sm font-medium text-[#171a1c]">
-            <ShieldCheck className="h-5 w-5 shrink-0 text-[#2e5b3a]" aria-hidden="true" />{item}
-          </li>
-        ))}
-      </ul>
-=======
     <section aria-label="Skandic Guarantees" className="border-b border-[#1F382B]/10 bg-[#FAF9F5] py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -63,7 +53,6 @@ export function TrustStrip() {
           ))}
         </ul>
       </div>
->>>>>>> Stashed changes
     </section>
   );
 }
@@ -73,34 +62,6 @@ export function Story() {
     <section id="story" className="scroll-mt-24 bg-[#FAF9F5] py-20 sm:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <Reveal>
-<<<<<<< Updated upstream
-          <Eyebrow number="01">Our story</Eyebrow>
-          <h2 className="mt-3 font-display text-4xl font-medium tracking-tight leading-tight text-[#171a1c] sm:text-5xl">
-            A holiday should feel like yours — because the house is.
-          </h2>
-          <p className="mt-5 text-lg leading-relaxed text-[#5b6770]">
-            Villas started with a simple frustration: beautiful places that still
-            felt shared. So we built a small collection of private houses where
-            your group is the only group — with a local team that hands over the
-            keys, shows you around, and then steps back.
-          </p>
-          <p className="mt-4 text-lg leading-relaxed text-[#5b6770]">
-            Some villas sit on their own island, reached by boat. Others sit
-            quietly on the coast, a walk from the beach. All of them are chosen
-            for light, water, and room to be together.
-          </p>
-          <dl className="mt-8 grid grid-cols-3 gap-6 border-t border-black/10 pt-8">
-            <div><dt className="text-sm text-[#5b6770]">Villas</dt><dd className="font-display text-3xl font-medium tracking-tight text-[#171a1c]">6</dd></div>
-            <div><dt className="text-sm text-[#5b6770]">Guests hosted</dt><dd className="font-display text-3xl font-medium tracking-tight text-[#171a1c]">2,400+</dd></div>
-            <div><dt className="text-sm text-[#5b6770]">Sample rating</dt><dd className="font-display text-3xl font-medium tracking-tight text-[#171a1c]">4.9 / 5</dd></div>
-          </dl>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <div className="relative overflow-hidden rounded-2xl shadow-none">
-            <span className="relative block aspect-[4/3]">
-              <Image src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80" alt="Villa living area opening onto a private pool" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-            </span>
-=======
           <div className="flex items-center gap-3">
             <Eyebrow number="01">The Philosophy</Eyebrow>
             <SkandicTag code="NORDIC ARCHITECTURE">FRILUFTSLIV &amp; LAGOM</SkandicTag>
@@ -157,7 +118,6 @@ export function Story() {
                 ARCHIPELAGO ISLAND HOUSE // LIVING PAVILION
               </div>
             </div>
->>>>>>> Stashed changes
           </div>
         </Reveal>
       </div>
@@ -165,14 +125,10 @@ export function Story() {
   );
 }
 
-<<<<<<< Updated upstream
+// Exported: the Coral Island House landing page imports `experiences` for
+// its "What Is Around It" cards (it reads icon/title/text only; the `tag`
+// field is ignored there).
 export const experiences = [
-  { icon: Sailboat, title: "Boat days", text: "Island transfers, snorkelling trips and sunset sails, arranged by the local team." },
-  { icon: ChefHat, title: "Private dining", text: "A chef at your villa, a barbecue on the terrace, or a table booked in town." },
-  { icon: Sun, title: "Slow mornings", text: "Coffee on the terrace, a pool to yourself, and no schedule unless you want one." },
-  { icon: Sparkles, title: "Celebrations", text: "Birthdays, reunions and small weddings in houses big enough to hold everyone." },
-=======
-const experiences = [
   {
     icon: Flame,
     title: "Wood-Fired Sauna & Cold Sea Immersion",
@@ -197,20 +153,10 @@ const experiences = [
     text: "Feast on smoked Baltic sea trout, juniper-glazed venison, fresh sourdough, and wild herb reductions prepared at your villa hearth.",
     tag: "GASTRONOMY",
   },
->>>>>>> Stashed changes
 ];
 
 export function Experiences() {
   return (
-<<<<<<< Updated upstream
-    <section id="experiences" className="scroll-mt-24 bg-[#f5f3f0] py-20 sm:py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-        <Reveal className="order-2 lg:order-1">
-          <div className="relative overflow-hidden rounded-2xl shadow-none">
-            <span className="relative block aspect-[4/3]">
-              <Image src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80" alt="Clear water and white sand at a tropical beach" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-            </span>
-=======
     <section id="experiences" className="scroll-mt-24 border-y border-[#1F382B]/10 bg-[#F4F2EC] py-20 sm:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <Reveal className="order-2 lg:order-1">
@@ -227,21 +173,10 @@ export function Experiences() {
                 SOLVIKEN SAUNA DECK // DUSK BATHING
               </div>
             </div>
->>>>>>> Stashed changes
           </div>
         </Reveal>
 
         <Reveal className="order-1 lg:order-2">
-<<<<<<< Updated upstream
-          <Eyebrow number="05">Experiences</Eyebrow>
-          <h2 className="mt-3 font-display text-4xl font-medium tracking-tight text-[#171a1c] sm:text-5xl">Relaxing or adventurous — your call</h2>
-          <p className="mt-4 text-lg text-[#5b6770]">Every villa includes the house and its amenities. Everything else is optional, quoted in advance, and arranged locally.</p>
-          <ul className="mt-8 space-y-6">
-            {experiences.map((e) => (
-              <li key={e.title} className="flex gap-4">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-[#2e5b3a] ring-1 ring-black/5"><e.icon className="h-6 w-6" aria-hidden="true" /></span>
-                <span><span className="block font-semibold text-[#171a1c]">{e.title}</span><span className="text-[#5b6770]">{e.text}</span></span>
-=======
           <div className="flex items-center gap-3">
             <Eyebrow number="03">Living Well</Eyebrow>
             <SkandicTag code="EXPERIENCES">REST &amp; RENEWAL</SkandicTag>
@@ -273,7 +208,6 @@ export function Experiences() {
                   <h3 className="mt-0.5 text-base font-semibold text-[#171B18]">{e.title}</h3>
                   <p className="mt-1 text-xs leading-relaxed text-[#59635D]">{e.text}</p>
                 </div>
->>>>>>> Stashed changes
               </li>
             ))}
           </ul>
@@ -318,31 +252,6 @@ export function Comparison() {
   ];
 
   return (
-<<<<<<< Updated upstream
-    <section aria-labelledby="compare-heading" className="bg-white py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal>
-          <Eyebrow number="06">Honest comparison</Eyebrow>
-          <h2 id="compare-heading" className="mt-3 font-display text-4xl font-medium tracking-tight text-[#171a1c] sm:text-5xl">How a villa stay compares</h2>
-        </Reveal>
-        <Reveal delay={0.1} className="mt-10 overflow-x-auto rounded-2xl bg-white shadow-none ring-1 ring-black/5">
-          <table className="w-full min-w-[640px] text-left">
-            <thead>
-              <tr className="border-b border-black/10">
-                <th scope="col" className="px-6 py-4 text-sm font-semibold text-[#5b6770]"></th>
-                <th scope="col" className="px-6 py-4 font-display text-lg font-medium tracking-tight text-[#171a1c]">Villas</th>
-                <th scope="col" className="px-6 py-4 text-sm font-semibold text-[#5b6770]">A resort suite</th>
-                <th scope="col" className="px-6 py-4 text-sm font-semibold text-[#5b6770]">Other rentals</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((r) => (
-                <tr key={r.label} className="border-b border-black/10 last:border-0">
-                  <th scope="row" className="px-6 py-4 text-sm font-semibold text-[#171a1c]">{r.label}</th>
-                  <td className="px-6 py-4 font-medium text-[#2e5b3a]">{r.villas}</td>
-                  <td className="px-6 py-4 text-[#5b6770]">{r.resort}</td>
-                  <td className="px-6 py-4 text-[#5b6770]">{r.other}</td>
-=======
     <section className="bg-[#FAF9F5] py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-3xl">
@@ -390,17 +299,11 @@ export function Comparison() {
                       <span>{row.rental}</span>
                     </span>
                   </td>
->>>>>>> Stashed changes
                 </tr>
               ))}
             </tbody>
           </table>
-<<<<<<< Updated upstream
-        </Reveal>
-        <p className="mt-4 flex items-center gap-2 text-sm text-[#5b6770]"><Waves className="h-4 w-4 text-[#2e5b3a]" aria-hidden="true" />Island villas are reached by a short boat ride; the transfer is part of the stay, not an extra to arrange.</p>
-=======
         </div>
->>>>>>> Stashed changes
       </div>
     </section>
   );

@@ -1,15 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-<<<<<<< Updated upstream
-  --font-display: "Inter", ui-sans-system, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-system, system-ui, sans-serif;
-  --color-forest: #2e5b3a;
-  --color-forest-light: #8fbf9a;
-  --color-ink: #171a1c;
-  --color-warm: #f5f3f0;
-  --color-grey: #5b6770;
-=======
   --font-sans: "Albert Sans", "Switzer", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-display: "Albert Sans", "Switzer", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
@@ -21,7 +12,6 @@
   --color-pine-dark: #152019;
   --color-line: rgba(0, 0, 0, 0.08);
   --color-badge: #EEECE6;
->>>>>>> Stashed changes
 }
 
 html {
@@ -37,32 +27,10 @@ html {
 }
 
 body {
-<<<<<<< Updated upstream
-  @apply bg-white font-sans text-[#171a1c] antialiased;
-}
-
-::selection {
-  background: #2e5b3a;
-  color: #ffffff;
-}
-
-/* Thin rule used between editorial sections. */
-.hairline {
-  border-color: rgba(23, 26, 28, 0.1);
-}
-
-/* Subtle hover lift for buttons/cards. */
-.lift {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.lift:hover {
-  transform: translateY(-2px);
-=======
   @apply bg-[#FAF9F6] font-sans text-[#1E201E] antialiased selection:bg-[#1E201E] selection:text-white;
 }
 
 /* Subtle line rule */
 .skandic-line {
   border-color: rgba(0, 0, 0, 0.08);
->>>>>>> Stashed changes
 }

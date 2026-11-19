@@ -3,15 +3,6 @@ import { skandicProperty } from "@/data/skandic";
 
 export default function Footer() {
   return (
-<<<<<<< Updated upstream
-    <footer className="bg-black pb-10 pt-16 text-white/80">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-3">
-          <div>
-            <Link href="#top" className="flex items-center gap-2 text-white">
-              <Waves className="h-7 w-7 text-[#8fbf9a]" aria-hidden="true" />
-              <span className="font-display text-2xl font-medium tracking-tight">Villas</span>
-=======
     <footer className="border-t border-black/10 py-16 text-xs text-[#5E655F]">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="grid gap-10 md:grid-cols-12">
@@ -19,7 +10,6 @@ export default function Footer() {
           <div className="md:col-span-5">
             <Link href="#top" className="font-display text-lg font-medium tracking-tight text-[#1E201E]">
               {skandicProperty.name}
->>>>>>> Stashed changes
             </Link>
             <p className="mt-1 text-xs text-[#5E655F]">
               {skandicProperty.location}
@@ -36,26 +26,6 @@ export default function Footer() {
           <div className="md:col-span-3">
             <p className="font-mono uppercase text-[#1E201E]">Explore</p>
             <ul className="mt-4 space-y-2">
-<<<<<<< Updated upstream
-              {[
-                ["#story", "Our story"],
-                ["#villas", "Villas"],
-                ["#inside", "Inside"],
-                ["#gallery", "Gallery"],
-                ["#experiences", "Experiences"],
-                ["#testimonials", "Reviews"],
-                ["#faq", "FAQ"],
-              ].map(([href, label]) => (
-                <li key={href}><Link href={href} className="transition hover:text-white hover:underline hover:underline-offset-4">{label}</Link></li>
-              ))}
-            </ul>
-          </nav>
-          <div>
-            <h2 className="font-semibold text-white">Contact</h2>
-            <p className="mt-4 flex items-center gap-2"><Mail className="h-4 w-4 text-[#8fbf9a]" aria-hidden="true" /><a href="mailto:hello@villas.example" className="hover:text-white hover:underline">hello@villas.example</a></p>
-            <p className="mt-3 text-sm leading-relaxed">Placeholder contact for this demo. Replace with the real business email, phone and address before launch.</p>
-            <Link href="#enquiry" className="lift mt-5 inline-block rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#171a1c] transition hover:bg-white/85">Check availability</Link>
-=======
               <li>
                 <Link href="#house" className="hover:text-[#1E201E]">
                   The house
@@ -117,7 +87,6 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
->>>>>>> Stashed changes
           </div>
         </div>
 

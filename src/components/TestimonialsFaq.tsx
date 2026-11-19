@@ -12,40 +12,6 @@ export function Testimonials() {
     setIndex((i) => (i + dir + testimonials.length) % testimonials.length);
 
   return (
-<<<<<<< Updated upstream
-    <section id="testimonials" className="scroll-mt-24 bg-[#f5f3f0] py-20 sm:py-24">
-      <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-        <Reveal>
-          <Eyebrow number="07">Guest stories</Eyebrow>
-          <h2 className="mt-3 font-display text-4xl font-medium tracking-tight text-[#171a1c] sm:text-5xl">Hear from past guests</h2>
-          <p className="mt-3 text-sm text-[#5b6770]">Sample content for this demo site — replace with real, permissioned guest reviews before launch.</p>
-        </Reveal>
-        <Reveal delay={0.1} className="mt-10 rounded-2xl bg-white p-8 shadow-none ring-1 ring-black/5 sm:p-12">
-          <div aria-live="polite">
-            <Quote className="mx-auto h-10 w-10 text-[#2e5b3a]" aria-hidden="true" />
-            <p className="mt-2 flex justify-center gap-1" aria-label="Rated 5 out of 5 stars">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-[#2e5b3a] text-[#2e5b3a]" aria-hidden="true" />
-              ))}
-            </p>
-            <blockquote className="mt-6 font-display text-2xl font-medium leading-snug text-[#171a1c] sm:text-3xl">
-              &ldquo;{t.quote}&rdquo;
-            </blockquote>
-            <p className="mt-6 font-semibold text-[#171a1c]">{t.name}</p>
-            <p className="text-sm text-[#5b6770]">{t.title} · Stayed {t.stay}</p>
-          </div>
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <button type="button" onClick={() => step(-1)} aria-label="Previous testimonial" className="rounded-full border border-black/15 p-3 text-[#171a1c] transition hover:bg-black/5 focus-visible:outline-2 focus-visible:outline-black">
-              <ChevronLeft className="h-5 w-5" aria-hidden="true" />
-            </button>
-            <div className="flex gap-2" role="tablist" aria-label="Choose testimonial">
-              {testimonials.map((item, i) => (
-                <button key={item.name} type="button" role="tab" aria-selected={index === i} aria-label={`Show testimonial from ${item.name}`} onClick={() => setIndex(i)} className={`h-2.5 rounded-full transition-all focus-visible:outline-2 focus-visible:outline-black ${index === i ? "w-8 bg-black" : "w-2.5 bg-black/20 hover:bg-black/40"}`} />
-              ))}
-            </div>
-            <button type="button" onClick={() => step(1)} aria-label="Next testimonial" className="rounded-full border border-black/15 p-3 text-[#171a1c] transition hover:bg-black/5 focus-visible:outline-2 focus-visible:outline-black">
-              <ChevronRight className="h-5 w-5" aria-hidden="true" />
-=======
     <section id="testimonials" className="scroll-mt-24 border-t border-[#1F382B]/10 bg-[#F4F2EC] py-20 sm:py-28">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
         <Reveal>
@@ -118,7 +84,6 @@ export function Testimonials() {
               className="rounded-full border border-[#1F382B]/20 bg-[#FAF9F5] p-3 text-[#1F382B] transition hover:bg-[#1F382B] hover:text-white focus-visible:outline-2 focus-visible:outline-[#1F382B]"
             >
               <ChevronRight className="h-4 w-4" aria-hidden="true" />
->>>>>>> Stashed changes
             </button>
           </div>
         </Reveal>
@@ -134,10 +99,6 @@ export function Faq() {
     <section id="faq" className="scroll-mt-24 border-t border-[#1F382B]/10 bg-[#FAF9F5] py-20 sm:py-28">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <Reveal className="text-center">
-<<<<<<< Updated upstream
-          <Eyebrow number="08">Questions, answered</Eyebrow>
-          <h2 className="mt-3 font-display text-4xl font-medium tracking-tight text-[#171a1c] sm:text-5xl">Before you book</h2>
-=======
           <div className="flex items-center justify-center gap-3">
             <Eyebrow number="07">Common Questions</Eyebrow>
             <SkandicTag code="ESSENTIALS">ARRIVAL &middot; SAUNA &middot; POLICIES</SkandicTag>
@@ -149,7 +110,6 @@ export function Faq() {
             Everything you need to know about arrival, private boat transfers, sauna preparation, and
             group gatherings.
           </p>
->>>>>>> Stashed changes
         </Reveal>
 
         <div className="mt-12 space-y-3.5">
@@ -157,21 +117,13 @@ export function Faq() {
             const isOpen = open === i;
             return (
               <Reveal key={f.question} delay={i * 0.03}>
-<<<<<<< Updated upstream
-                <div className="overflow-hidden rounded-2xl ring-1 ring-black/5">
-=======
                 <div className="overflow-hidden rounded-2xl border border-[#1F382B]/15 bg-white transition hover:border-[#1F382B]/35">
->>>>>>> Stashed changes
                   <button
                     type="button"
                     onClick={() => setOpen(isOpen ? null : i)}
                     aria-expanded={isOpen}
                     aria-controls={`faq-panel-${i}`}
-<<<<<<< Updated upstream
-                    className="flex w-full items-center justify-between gap-4 bg-white px-6 py-5 text-left font-semibold text-[#171a1c] transition hover:bg-[#f5f3f0] focus-visible:outline-2 focus-visible:outline-black"
-=======
                     className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-base font-semibold text-[#171B18] transition hover:bg-[#FAF9F5] focus-visible:outline-2 focus-visible:outline-[#1F382B]"
->>>>>>> Stashed changes
                   >
                     <span className="flex items-center gap-3">
                       {f.category && (
@@ -190,14 +142,10 @@ export function Faq() {
                   </button>
 
                   {isOpen && (
-<<<<<<< Updated upstream
-                    <div id={`faq-panel-${i}`} className="border-t border-black/10 bg-[#f5f3f0] px-6 py-5 text-[#5b6770]">
-=======
                     <div
                       id={`faq-panel-${i}`}
                       className="border-t border-[#1F382B]/10 bg-[#FAF9F5] px-6 py-5 text-sm leading-relaxed text-[#59635D]"
                     >
->>>>>>> Stashed changes
                       {f.answer}
                     </div>
                   )}

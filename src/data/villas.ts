@@ -11,6 +11,11 @@ import {
 
 export type VillaType = "Island" | "Coastal" | "Beachfront";
 
+// Restored: the Coral Island House landing page (src/app/villas/
+// coral-island-house/page.tsx) and FeaturedLanding.tsx import this type.
+// (It was dropped in the Skandic data rewrite; those two files are untouched.)
+export type GalleryImage = { src: string; alt: string };
+
 export type Villa = {
   id: string;
   name: string;
