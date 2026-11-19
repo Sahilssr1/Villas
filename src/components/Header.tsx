@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, Waves } from "lucide-react";
 
@@ -22,7 +23,13 @@ const links = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  // Featured landing pages under /villas/* render their own inverting nav
+  // (FeaturedNav); this pill nav would double up, and its links point at
+  // home-page sections that do not exist there. Home behaviour is unchanged.
+  if (pathname?.startsWith("/villas/")) return null;
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 lg:top-4 lg:px-6">

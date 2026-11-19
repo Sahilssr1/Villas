@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import VillasSection from "@/components/VillasSection";
+import { FeaturedStay } from "@/components/FeaturedLanding";
 import InsideVillas from "@/components/InsideVillas";
 import Gallery from "@/components/Gallery";
 import { TrustStrip, Story, Experiences, Comparison } from "@/components/Sections";
@@ -13,6 +14,7 @@ export default function Home() {
       <TrustStrip />
       <Story />
       <VillasSection />
+      <FeaturedStay />
       <InsideVillas />
       <Gallery />
       <Experiences />

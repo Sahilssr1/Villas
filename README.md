@@ -142,3 +142,50 @@ purchase was used; everything here is original code in this repo.
 - Gallery lightbox, Experiences, Comparison, Testimonials, FAQ,
   Enquiry and Newsletter forms, and Footer are restyled only — no
   fields or sections removed, no new dependencies.
+
+## Featured landing page: Coral Island House (uncommitted)
+
+A one-property landing page at `/villas/coral-island-house` for the
+featured villa Coral Island House (Palm Island, Island, up to 10 guests,
+5 bedrooms, 5 bathrooms, 6,100 sq ft, $1,250/night, $7,900/week), built
+from the existing data in `src/data/villas.ts` only — no new facts, prices,
+bedroom counts, amenities, places, or availability were invented. All copy
+is the site's own; only the layout, motion and photography follow the
+Skandic template (see below).
+
+Design: the Skandic system (light, distinct from the home page's Aerra
+dusk system) — white + pale warm-grey sections, near-black text,
+forest-green accent, black closing CTA, huge light headlines, small-caps
+numbered eyebrow labels ("01 — INTRODUCTION"), pill buttons. The home page
+keeps its existing design; it links here from a "Featured stay" banner.
+
+Photos and video: the EXACT assets from the free Skandic Framer template
+by Pixco, downloaded from the public demo (skandic.framer.website) at the
+user's explicit choice on 2026-11-19 and stored locally in
+`public/skandic/` (36 images + hero.mp4, 18 MB). Full inventory with the
+source URLs: `skandic-assets-inventory.md`. Note: these assets are Pixco's
+template files, free to use inside Framer — reusing the exact files here
+was the user's call. The three journal images
+(`journal-01..03.png`) are stored but UNUSED — there is no Journal section
+(no articles exist; none were invented).
+
+Sections, in order: page-local sticky nav (inverts white-on-hero to black
+on white when scrolled, hamburger on small screens; the site-wide Header
+hides itself on `/villas/*` routes so the navs never double up), hero
+(full-screen looping video `/skandic/hero.mp4` with 6 crossfading chapter
+images, 600ms ease, manual chapter tabs, static poster for reduced-motion
+users, no loader), 01 Introduction (tagline + data-only paragraph,
+intro-kitchen photo, stats bar), 02 As Found (horizontal strip of 7 tall
+photos), 03 The House (8-photo grid with lightbox, Esc/arrows), 04 Guest
+Book (all 6 existing testimonials, still labelled sample, staggered
+scroll-reveal, no host card), 05 Before You Pack (carousel, 6 photos),
+06 Included in Every Stay (numbered cards from the villa's amenities only
++ rooms summary), 07 What Is Around It (existing Experiences content only,
+illustrated with the 4 around-* photos), 08 How Booking Works (3 honest
+enquiry-only steps — no payment, bank-transfer, or door-code claims),
+09 Rates (nightly/weekly from the data, computed $850 weekly saving vs
+7× nightly — labelled demo rates, no invented seasonal rates),
+10 Questions (existing FAQ accordion), black closing CTA, and the enquiry
+form pre-selected to this villa via the optional `initialVillaId` prop on
+`EnquiryForm` (home page behaviour unchanged). The sitemap includes the
+new route. The enquiry API is unchanged (validation only).

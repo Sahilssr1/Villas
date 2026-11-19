@@ -8,8 +8,10 @@ import Reveal, { Eyebrow } from "./Reveal";
 const inputCls = "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-[#171a1c] placeholder:text-slate-400 focus:border-[#0f1e2a] focus:outline-2 focus:outline-[#0f1e2a]";
 const labelCls = "mb-1.5 block text-sm font-semibold text-[#171a1c]";
 
-export function EnquiryForm() {
-  const [villaId, setVillaId] = useState(villas[0].id);
+export function EnquiryForm({ initialVillaId }: { initialVillaId?: string } = {}) {
+  const [villaId, setVillaId] = useState(
+    initialVillaId && villas.some((v) => v.id === initialVillaId) ? initialVillaId : villas[0].id
+  );
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState("4");

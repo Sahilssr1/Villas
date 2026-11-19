@@ -55,7 +55,7 @@ export function Story() {
   );
 }
 
-const experiences = [
+export const experiences = [
   { icon: Sailboat, title: "Boat days", text: "Island transfers, snorkelling trips and sunset sails, arranged by the local team." },
   { icon: ChefHat, title: "Private dining", text: "A chef at your villa, a barbecue on the terrace, or a table booked in town." },
   { icon: Sun, title: "Slow mornings", text: "Coffee on the terrace, a pool to yourself, and no schedule unless you want one." },
